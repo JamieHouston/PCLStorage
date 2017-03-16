@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.2</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;NETSTANDARD1_4; NETSTANDARD</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\src\PCLStorage\AwaitExtensions.cs" Link="AwaitExtensions.cs" />
+    <Compile Include="..\src\PCLStorage\FileSystem.cs" Link="FileSystem.cs" />
+    <Compile Include="..\src\PCLStorage\PortablePath.cs" Link="PortablePath.cs" />
+    <Compile Include="..\src\PCLStorage\Requires.cs" Link="Requires.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PCLStorage.Abstractions.Standard\PCLStorage.Abstractions.Standard.csproj" />
+  </ItemGroup>
+
+</Project>

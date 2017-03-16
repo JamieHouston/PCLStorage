@@ -36,6 +36,8 @@ namespace PCLStorage
 			return new IsoStoreFileSystem();
 #elif FILE_SYSTEM
             return new DesktopFileSystem();
+#elif NETSTANDARD
+            return new StandardFileSystem();
 #else
             return null;
 #endif
